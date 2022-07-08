@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Team Budget Planner</h1>
+        </div>
+        <div class="budget-section">
+            <div class="budget col col-md col-sm">
+                <img src="images/piggy-bank.png" width="40" alt="Piggy Bank" />
+                <h2>Budget</h2>
+                <p class="amount">$ <span id="budgetAmount">0</span></p>
+            </div>
+            <div class="expenses col col-md col-sm">
+                <img src="images/mobile-banking.png" width="40" alt="Mobile Banking" />
+                <h2>Expenses</h2>
+                <p class="exp-amount">$ <span id="expensesAmount">0</span></p>
+            </div>
+            <div class="balance col col-md col-sm">
+                <img src="images/bank.png" width="40" alt="Bank Building" />
+                <h2>balance</h2>
+                <p class="amount bala">$ <span id="balanceAmount">0</span></p>
+            </div>
+        </div>
+        <div id="displayExpenses">
+            <div class="budget-list">
+                <div class="col">
+                    <h4>Expense Item</h4>
+                </div>
+                <div class="col">
+                    <h4>Expense Amount</h4>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div id="expValue"></div>
+        </div>
+    </div>
+    <div class="toggle">
+        <button id="myBtn" type="button">+</button>
+    </div>
+
+
+    <!-- Modal popup -->
+    <div id="myModal" class="modal">
+        <!-- The modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Your Budget</h2>
+            </div>
+            <div class="modal-body">
+                <div class="budget-form" id="budgetForm">
+                    <form id="addForm">
+                        <label for="">Add Budget Amount (ex. 500)</label> <br />
+                        <input type="number" id="number" /> <br />
+                        <button type="submit">Add Budget</button>
+                    </form>
+                </div>
+
+                <div class="expense-form" id="expense-form">
+                    <form action="" id="expForm">
+                        <div class="">
+                            <label for="">Enter an Expense Item (ex. Shoes)</label> <br />
+                            <input type="text" id="expName" />
+                        </div>
+                        <div class="">
+                            <label for="">Enter Expense Amount (ex. 100)</label> <br />
+                            <input type="number" id="expNumber" />
+                        </div>
+                        <button type="submit" id="submitExpen">Add the Expense</button>
+                    </form>
+                    <button onclick="callBudget()" id="bug">
+                        Go Back to Budget
+                    </button>
+                </div>
+
+                <div class="edit-form" id="editForm">
+                    <form action="" id="saveEdit">
+                        <div class="">
+                            <label for="">Edit Expense</label> <br />
+                            <input type="text" id="editExpName" />
+                        </div>
+                        <div class="">
+                            <label for="">Edit Expense Amount</label> <br />
+                            <input type="number" id="editExpNumber" />
+                        </div>
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
